@@ -1,154 +1,134 @@
-# Pac-Man em Java
+# DarkShop
 
 Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas do Centro Universitário Senac.
 
 ## Descrição
 
-Desenvolvimento de um jogo digital baseado no clássico arcade Pac-Man, implementado em Java para execução em terminal/console. O projeto demonstra a aplicação de conceitos de programação orientada a objetos, estruturas de dados, manipulação de arquivos e lógica de jogo.
+O DarkShop é uma aplicação web de e-commerce desenvolvida com Angular, com foco em praticar conceitos de desenvolvimento front-end, componentização, consumo de dados e organização de interface.
+
+O projeto simula uma loja virtual com catálogo de produtos, navegação entre páginas e gerenciamento visual dos itens exibidos.
 
 # Autores
 
-- Ana Beatriz Santana
-- Aparecida da Silva
-- Beatriz Alcantara
-- Giovanna Batista
-- Jusley Carvalho
-- Patrik Santos Silva
-- Vinicius Melo
+- Maria Rita de Cassia Sousa Santos
+- Vinicius Alves Soares de Melo
 
 # Tecnologias
 
-- Java 11+
-- Scanner (entrada de dados do usuário)
-- Arrays bidimensionais (labirinto)
-- Manipulação de arquivos (salvamento de recordes)
-- Random (movimento dos fantasmas)
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+- Node.js
+- JSON Server
 
-# Características do Jogo
+# Características do Projeto
 
-- **Interface:** Terminal/Console (modo texto)
-- **Labirinto:** Grade 15x20 com paredes e corredores
-- **Personagens:**
-  - Pac-Man (C): Controlado pelo jogador
-  - 4 Fantasmas (F): Movimento aleatório
-- **Itens:**
-  - Bolinhas (.) : 10 pontos cada
-  - Power Pellets (O): 50 pontos + torna fantasmas vulneráveis
-- **Sistema de Vidas:** 3 vidas iniciais
-- **Sistema de Níveis:** Progressão com aumento de dificuldade
-- **Recordes:** Top 3 melhores pontuações salvas em arquivo
+- **Interface:** Aplicação Web responsiva
+- **Catálogo:** Listagem e exibição de produtos
+- **Navegação:** Múltiplas páginas com roteamento Angular
+- **Componentização:** Componentes reutilizáveis e modulares
+- **Simulação de API:** JSON Server para dados dinâmicos
+- **Estrutura Modular:** Organização seguindo padrões do Angular
 
-# Como Jogar
+# Objetivos do Projeto
 
-# Controles
-- **W** - Mover para cima
-- **S** - Mover para baixo
-- **A** - Mover para esquerda
-- **D** - Mover para direita
-- **P** - Pausar o jogo
+- Praticar desenvolvimento com Angular
+- Aplicar conceitos de componentização
+- Trabalhar em equipe utilizando Git/GitHub
+- Desenvolver interfaces modernas e responsivas
+- Compreender estruturação de projetos front-end
 
-# Objetivo
-Coletar todas as bolinhas do labirinto sem ser capturado pelos fantasmas. Colete Power Pellets para tornar os fantasmas vulneráveis e comê-los por pontos extras!
+# Funcionalidades
 
-# Pontuação
-- Bolinha comum: 10 pontos
-- Power Pellet: 50 pontos
-- Fantasma capturado: 200 pontos
-- Bônus por completar nível: 1000 pontos
+- ✅ Listagem de produtos
+- ✅ Navegação entre páginas
+- ✅ Componentes reutilizáveis
+- ✅ Interface responsiva
+- ✅ Simulação de API com JSON Server
+- ✅ Estrutura modular com Angular
 
 # Estrutura do Projeto
+
 ```
-pacman-java/
+darkshop/
 ├── src/
-│   ├── GameManager.java    # Classe principal e menu
-│   ├── Jogo.java           # Lógica do jogo
-│   └── Recordes.java       # Sistema de recordes
-├── bin/                    # Arquivos compilados
-├── recordes.txt           # Arquivo de recordes (gerado automaticamente)
+├── public/
+├── backend/
+│   └── db.json         # Dados simulados da API
+├── angular.json
+├── package.json
 └── README.md
 ```
 
 # Como Executar
 
-# Opção 1: Via IDE (VS Code, IntelliJ, Eclipse)
-1. Abra o projeto na IDE
-2. Execute o arquivo `GameManager.java`
-3. O jogo abrirá no terminal integrado
+## Pré-requisitos
 
-# Opção 2: Via Terminal/Prompt de Comando
-1. Navegue até a pasta `src`:
+- Node.js instalado
+- Angular CLI instalada globalmente
+
+Instalar o Angular CLI:
 ```bash
-   cd pacman-java/src
+npm install -g @angular/cli
 ```
 
-2. Compile os arquivos:
+## Instalação
+
+Clone o repositório:
 ```bash
-   javac GameManager.java Jogo.java Recordes.java
+git clone https://github.com/SEUUSUARIO/darkshop.git
 ```
 
-3. Execute o jogo:
+Acesse a pasta do projeto:
 ```bash
-   java GameManager
+cd darkshop
 ```
 
-# Funcionalidades Implementadas
+Instale as dependências:
+```bash
+npm install
+```
 
-# Requisitos Funcionais
-- ✅ RF01: Menu Principal (Novo Jogo, Recordes, Instruções, Sair)
-- ✅ RF02: Movimentação do Pac-Man via comandos de teclado
-- ✅ RF03: Colisão com paredes
-- ✅ RF04: Coleta de itens (bolinhas e power pellets)
-- ✅ RF05: Comportamento dos fantasmas (movimento aleatório)
-- ✅ RF06: Power-Up (modo vulnerável)
-- ✅ RF07: Sistema de vidas
-- ✅ RF08: Progressão de níveis
-- ✅ RF09: Exibição de informações (score, vidas, nível)
-- ✅ RF10: Sistema de pausa
-- ✅ RF11: Tela de Game Over
-- ✅ RF12: Registro de recordes em arquivo
-- ✅ RF13: Tela de instruções
+## Executando o Front-end
 
-# Requisitos Não Funcionais
-- ✅ RNF04: Portabilidade (Java 11+)
-- ✅ RNF05: Código orientado a objetos
-- ✅ RNF06: Tratamento de exceções
-- ✅ RNF07: Funcionamento offline
+```bash
+ng serve
+```
+
+Acesse em:
+```
+http://localhost:4200
+```
+
+## Executando o JSON Server
+
+```bash
+npx json-server backend/db.json
+```
 
 # Conceitos de Programação Aplicados
 
-- **Orientação a Objetos:** Classes, métodos, encapsulamento
-- **Arrays Bidimensionais:** Representação do labirinto
-- **Estruturas de Controle:** If/else, switch, loops (for, while)
-- **Manipulação de Arquivos:** Leitura e escrita de recordes
-- **Tratamento de Entrada:** Scanner para comandos do usuário
-- **Aleatoriedade:** Random para movimento dos fantasmas
-- **Lógica de Colisão:** Verificação de posições no labirinto
+- **Componentização:** Criação e reutilização de componentes Angular
+- **Roteamento:** Navegação entre páginas com Angular Router
+- **Consumo de Dados:** Integração com API simulada via JSON Server
+- **TypeScript:** Tipagem estática e orientação a objetos
+- **CSS Responsivo:** Layout adaptado para diferentes dispositivos
+- **Versionamento:** Controle de versão com Git/GitHub
 
-# Padrões de Projeto Aplicados
+# Aprendizados
 
-- **Singleton:** GameManager como ponto único de entrada
-- **Separação de Responsabilidades:** Cada classe com função específica
-  - GameManager: Controle de menu e fluxo principal
-  - Jogo: Lógica do gameplay
-  - Recordes: Persistência de dados
+Durante o desenvolvimento do projeto foram praticados conceitos como:
 
-
-# Por que Terminal/Console?
-- Facilita o aprendizado de lógica de programação
-- Foco nos conceitos fundamentais sem complexidade gráfica
-- Execução simples e universal
-
-# Simplicidade do Código
-O código foi desenvolvido priorizando:
-- Clareza e legibilidade
-- Conceitos adequados ao nível de aprendizado
-- Facilidade de manutenção
-- Demonstração prática de fundamentos
-
+- Estruturação de aplicações Angular
+- Componentização e reutilização de código
+- Organização de pastas e arquivos
+- Consumo e manipulação de dados
+- Versionamento com Git/GitHub
+- Trabalho em equipe
 
 # Licença
 
 Projeto acadêmico desenvolvido para fins educacionais.
-
 
 Projeto desenvolvido por alunos do Centro Universitário Senac - 2025
