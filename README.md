@@ -131,4 +131,4 @@ Durante o desenvolvimento do projeto foram praticados conceitos como:
 
 Projeto acadêmico desenvolvido para fins educacionais.
 
-Projeto desenvolvido por alunos do Centro Universitário Senac - 2025
+Projeto desenvolvido por alunos do Centro Universitário Senac - 2026
